@@ -1,4 +1,4 @@
-package com.pattern;
+package com.github.pattern;
 
 /**
  * Hello world!
