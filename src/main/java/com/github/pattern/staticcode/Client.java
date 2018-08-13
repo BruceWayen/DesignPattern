@@ -21,7 +21,7 @@ package com.github.pattern.staticcode;
  *                             `=---='
  *          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *                     佛祖保佑        永无BUG
- *@DESCRIPTION ${END}
+ *@DESCRIPTION 测试静态区代码执行顺序
  *@AUTHOR SongHongWei
  *@TIME 2018/8/11-15:52
  *@PACKAGE_NAME test.staticcode
