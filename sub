@@ -5,18 +5,15 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: muamua.cf_vmess_ws, server: muamua.cf, port: 443, type: vmess, uuid: 71e61b09-7a77-4ed0-b991-fa929b9e482a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: muamua.cf, network: ws, ws-opts: {path: /vlgyvws, headers: {Host: muamua.cf}}, udp: true}
-  - {name: muamua.cf_trojan_tcp_Trojan, server: muamua.cf, port: 443, type: trojan, password: 71e61b09-7a77-4ed0-b991-fa929b9e482a, sni: muamua.cf, skip-cert-verify: true, udp: true}
-  - {name: muamua.cf_trojan_gRPC, server: muamua.cf, port: 443, type: trojan, password: 71e61b09-7a77-4ed0-b991-fa929b9e482a, sni: muamua.cf, skip-cert-verify: true, udp: true}
-  - {name: vmess_19137, server: 129.152.9.16, port: 19137, type: vmess, uuid: a5c37037-bd53-4bd5-b69b-75196ff3254c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: trojan_19138, server: 129.152.9.16, port: 19138, type: trojan, password: KqFws2jsxu, skip-cert-verify: true, udp: true}
-  - {name: shadowsocks_19139, server: 129.152.9.16, port: 19139, type: ss, cipher: aes-256-gcm, password: dHym6NbqJT, udp: true}
-  - {name: wz, server: 129.152.9.16, port: 19141, type: vmess, uuid: f78b516f-2f55-46b1-8dd3-3a6b815e48bc, alterId: 121, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 129.152.9.16:52240, server: 129.152.9.16, port: 52240, type: ss, cipher: aes-256-gcm, password: RsG4kEJ2bm, udp: true}
-  - {name: vmess_19389, server: 129.152.29.216, port: 19389, type: vmess, uuid: 4e618148-8362-413d-ec7f-b40dd94384e1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: trojan_14386, server: 129.152.29.216, port: 44386, type: trojan, password: C931CWacy8, skip-cert-verify: true, udp: true}
-  - {name: shadowsocks_19733, server: 129.152.29.216, port: 19733, type: ss, cipher: aes-256-gcm, password: fr2nM7Mkct, udp: true}
-  - {name: v1, server: 129.152.29.216, port: 10512, type: vmess, uuid: 58781eee-baba-6666-baba-2ca0ada6568b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: vmess_19389, server: 204.216.214.102, port: 19389, type: vmess, uuid: 4e618148-8362-413d-ec7f-b40dd94384e1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: trojan_14386, server: 204.216.214.102, port: 44386, type: trojan, password: C931CWacy8, skip-cert-verify: true, udp: true}
+  - {name: shadowsocks_19733, server: 204.216.214.102, port: 19733, type: ss, cipher: aes-256-gcm, password: fr2nM7Mkct, udp: true}
+  - {name: v1, server: 204.216.214.102, port: 10512, type: vmess, uuid: 58781eee-baba-6666-baba-2ca0ada6568b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: vmess_19137, server: yangleduo.cf, port: 19137, type: vmess, uuid: a5c37037-bd53-4bd5-b69b-75196ff3254c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: trojan_19138, server: yangleduo.cf, port: 19138, type: trojan, password: KqFws2jsxu, skip-cert-verify: true, udp: true}
+  - {name: shadowsocks_19139, server: yangleduo.cf, port: 19139, type: ss, cipher: aes-256-gcm, password: dHym6NbqJT, udp: true}
+  - {name: wz, server: yangleduo.cf, port: 19141, type: vmess, uuid: f78b516f-2f55-46b1-8dd3-3a6b815e48bc, alterId: 121, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: as, server: yangleduo.cf, port: 52240, type: ss, cipher: aes-256-gcm, password: RsG4kEJ2bm, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -25,71 +22,59 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - DIRECT
-      - muamua.cf_vmess_ws
-      - muamua.cf_trojan_tcp_Trojan
-      - muamua.cf_trojan_gRPC
-      - vmess_19137
-      - trojan_19138
-      - shadowsocks_19139
-      - wz
-      - 129.152.9.16:52240
       - vmess_19389
       - trojan_14386
       - shadowsocks_19733
       - v1
+      - vmess_19137
+      - trojan_19138
+      - shadowsocks_19139
+      - wz
+      - as
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - muamua.cf_vmess_ws
-      - muamua.cf_trojan_tcp_Trojan
-      - muamua.cf_trojan_gRPC
-      - vmess_19137
-      - trojan_19138
-      - shadowsocks_19139
-      - wz
-      - 129.152.9.16:52240
       - vmess_19389
       - trojan_14386
       - shadowsocks_19733
       - v1
+      - vmess_19137
+      - trojan_19138
+      - shadowsocks_19139
+      - wz
+      - as
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - muamua.cf_vmess_ws
-      - muamua.cf_trojan_tcp_Trojan
-      - muamua.cf_trojan_gRPC
-      - vmess_19137
-      - trojan_19138
-      - shadowsocks_19139
-      - wz
-      - 129.152.9.16:52240
       - vmess_19389
       - trojan_14386
       - shadowsocks_19733
       - v1
+      - vmess_19137
+      - trojan_19138
+      - shadowsocks_19139
+      - wz
+      - as
   - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - muamua.cf_vmess_ws
-      - muamua.cf_trojan_tcp_Trojan
-      - muamua.cf_trojan_gRPC
-      - vmess_19137
-      - trojan_19138
-      - shadowsocks_19139
-      - wz
-      - 129.152.9.16:52240
       - vmess_19389
       - trojan_14386
       - shadowsocks_19733
       - v1
+      - vmess_19137
+      - trojan_19138
+      - shadowsocks_19139
+      - wz
+      - as
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -109,18 +94,15 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
-      - muamua.cf_vmess_ws
-      - muamua.cf_trojan_tcp_Trojan
-      - muamua.cf_trojan_gRPC
-      - vmess_19137
-      - trojan_19138
-      - shadowsocks_19139
-      - wz
-      - 129.152.9.16:52240
       - vmess_19389
       - trojan_14386
       - shadowsocks_19733
       - v1
+      - vmess_19137
+      - trojan_19138
+      - shadowsocks_19139
+      - wz
+      - as
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
@@ -1825,7 +1807,6 @@ rules:
  - DOMAIN-SUFFIX,safebrowsing.googleapis.com,🎯 全球直连
  - DOMAIN-SUFFIX,settings.crashlytics.com,🎯 全球直连
  - DOMAIN-SUFFIX,ssl-google-analytics.l.google.com,🎯 全球直连
- - DOMAIN-SUFFIX,ssl.gstatic.com,🎯 全球直连
  - DOMAIN-SUFFIX,toolbarqueries.google.com,🎯 全球直连
  - DOMAIN-SUFFIX,tools.google.com,🎯 全球直连
  - DOMAIN-SUFFIX,tools.l.google.com,🎯 全球直连
