@@ -8,11 +8,11 @@ proxies:
   - {name: muamua.cf_vmess_ws, server: muamua.cf, port: 443, type: vmess, uuid: 71e61b09-7a77-4ed0-b991-fa929b9e482a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: muamua.cf, network: ws, ws-opts: {path: /vlgyvws, headers: {Host: muamua.cf}}, udp: true}
   - {name: muamua.cf_trojan_tcp_Trojan, server: muamua.cf, port: 443, type: trojan, password: 71e61b09-7a77-4ed0-b991-fa929b9e482a, sni: muamua.cf, skip-cert-verify: true, udp: true}
   - {name: muamua.cf_trojan_gRPC, server: muamua.cf, port: 443, type: trojan, password: 71e61b09-7a77-4ed0-b991-fa929b9e482a, sni: muamua.cf, skip-cert-verify: true, udp: true}
-  - {name: vmess_19137, server: 129.152.28.100, port: 19137, type: vmess, uuid: a5c37037-bd53-4bd5-b69b-75196ff3254c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: trojan_19138, server: 129.152.28.100, port: 19138, type: trojan, password: KqFws2jsxu, skip-cert-verify: true, udp: true}
-  - {name: shadowsocks_19139, server: 129.152.28.100, port: 19139, type: ss, cipher: aes-256-gcm, password: dHym6NbqJT, udp: true}
-  - {name: wz, server: 129.152.28.100, port: 19141, type: vmess, uuid: f78b516f-2f55-46b1-8dd3-3a6b815e48bc, alterId: 121, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 129.152.28.100:52240, server: 129.152.28.100, port: 52240, type: ss, cipher: aes-256-gcm, password: RsG4kEJ2bm, udp: true}
+  - {name: vmess_19137, server: 129.152.9.16, port: 19137, type: vmess, uuid: a5c37037-bd53-4bd5-b69b-75196ff3254c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: trojan_19138, server: 129.152.9.16, port: 19138, type: trojan, password: KqFws2jsxu, skip-cert-verify: true, udp: true}
+  - {name: shadowsocks_19139, server: 129.152.9.16, port: 19139, type: ss, cipher: aes-256-gcm, password: dHym6NbqJT, udp: true}
+  - {name: wz, server: 129.152.9.16, port: 19141, type: vmess, uuid: f78b516f-2f55-46b1-8dd3-3a6b815e48bc, alterId: 121, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 129.152.9.16:52240, server: 129.152.9.16, port: 52240, type: ss, cipher: aes-256-gcm, password: RsG4kEJ2bm, udp: true}
   - {name: vmess_19389, server: 129.152.29.216, port: 19389, type: vmess, uuid: 4e618148-8362-413d-ec7f-b40dd94384e1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: trojan_14386, server: 129.152.29.216, port: 44386, type: trojan, password: C931CWacy8, skip-cert-verify: true, udp: true}
   - {name: shadowsocks_19733, server: 129.152.29.216, port: 19733, type: ss, cipher: aes-256-gcm, password: fr2nM7Mkct, udp: true}
@@ -32,7 +32,7 @@ proxy-groups:
       - trojan_19138
       - shadowsocks_19139
       - wz
-      - 129.152.28.100:52240
+      - 129.152.9.16:52240
       - vmess_19389
       - trojan_14386
       - shadowsocks_19733
@@ -50,7 +50,7 @@ proxy-groups:
       - trojan_19138
       - shadowsocks_19139
       - wz
-      - 129.152.28.100:52240
+      - 129.152.9.16:52240
       - vmess_19389
       - trojan_14386
       - shadowsocks_19733
@@ -67,7 +67,7 @@ proxy-groups:
       - trojan_19138
       - shadowsocks_19139
       - wz
-      - 129.152.28.100:52240
+      - 129.152.9.16:52240
       - vmess_19389
       - trojan_14386
       - shadowsocks_19733
@@ -85,7 +85,7 @@ proxy-groups:
       - trojan_19138
       - shadowsocks_19139
       - wz
-      - 129.152.28.100:52240
+      - 129.152.9.16:52240
       - vmess_19389
       - trojan_14386
       - shadowsocks_19733
@@ -116,7 +116,7 @@ proxy-groups:
       - trojan_19138
       - shadowsocks_19139
       - wz
-      - 129.152.28.100:52240
+      - 129.152.9.16:52240
       - vmess_19389
       - trojan_14386
       - shadowsocks_19733
